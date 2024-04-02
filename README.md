@@ -8,10 +8,10 @@ To write a program to implement the Decision Tree Classifier Model for Predictin
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1. Import the libraries and read the data frame using pandas.
+2. Calculate the null values present in the dataset and apply label encoder.
+3. Determine test and training data set and apply decison tree classification in dataset.
+4. calculate Accuracy,data prediction.
 
 ## Program:
 ```
@@ -31,7 +31,8 @@ from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
 data["salary"]=le.fit_transform(data["salary"])
 data.head()
-x=data[["satisfaction_level","last_evaluation","number_project","average_montly_hours","time_spend_company","Work_accident","promotion_last_5years","salary"]]
+x=data[["satisfaction_level","last_evaluation","number_project","average_montly_hours","time_spend_company",
+          "Work_accident","promotion_last_5years","salary"]]
 x.head()
 y=data["left"]
 from sklearn.model_selection import train_test_split
